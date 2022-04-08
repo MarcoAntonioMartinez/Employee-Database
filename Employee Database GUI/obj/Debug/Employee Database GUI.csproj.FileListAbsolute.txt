@@ -1,0 +1,10 @@
+C:\Users\Marco\Documents\Code\C# Projects\Employee Database GUI\Employee Database GUI\obj\Debug\Employee Database GUI.csprojAssemblyReference.cache
+C:\Users\Marco\Documents\Code\C# Projects\Employee Database GUI\Employee Database GUI\obj\Debug\Employee_Database_GUI.Properties.Resources.resources
+C:\Users\Marco\Documents\Code\C# Projects\Employee Database GUI\Employee Database GUI\obj\Debug\Employee Database GUI.csproj.GenerateResource.cache
+C:\Users\Marco\Documents\Code\C# Projects\Employee Database GUI\Employee Database GUI\obj\Debug\Employee Database GUI.csproj.CoreCompileInputs.cache
+C:\Users\Marco\Documents\Code\C# Projects\Employee Database GUI\Employee Database GUI\bin\Debug\Employee Database GUI.exe.config
+C:\Users\Marco\Documents\Code\C# Projects\Employee Database GUI\Employee Database GUI\bin\Debug\Employee Database GUI.exe
+C:\Users\Marco\Documents\Code\C# Projects\Employee Database GUI\Employee Database GUI\bin\Debug\Employee Database GUI.pdb
+C:\Users\Marco\Documents\Code\C# Projects\Employee Database GUI\Employee Database GUI\obj\Debug\Employee Database GUI.exe
+C:\Users\Marco\Documents\Code\C# Projects\Employee Database GUI\Employee Database GUI\obj\Debug\Employee Database GUI.pdb
+C:\Users\Marco\Documents\Code\C# Projects\Employee Database GUI\Employee Database GUI\obj\Debug\Employee_Database_GUI.Form1.resources

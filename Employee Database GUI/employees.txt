@@ -1,0 +1,11 @@
+9638693,Oneil,Lachlan,Information Technology,PT,75495
+9486656,Sweet,Taryn,Information Technology,FT,63640
+9708505,Ruiz,Aden,Marketing,FT,54268
+9385323,Carroll,Vikram,Information Technology,PT,59529
+9960186,Terry,Khadeeja,Finance,FT,62851
+9236446,Pineda,Pranav,Information Technology,FT,72385
+9530303,Heaton,Mya,Operations Management,FT,83332
+9301363,Prentice,Latisha,Finance,FT,65627
+9147874,Escobar,Raihan,Human Resources,FT,57775
+9739490,Armstrong,Jean,Information Technology,PT,59529
+9754509,Krzysztof,Cowan,Information Technology,FT,63640
