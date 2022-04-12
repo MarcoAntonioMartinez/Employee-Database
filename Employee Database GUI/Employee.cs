@@ -10,7 +10,6 @@ namespace Employee_Database_GUI
         // employee no., lname, fname, dept, part time/full time, salary
         readonly uint eid;
         private string lname, fname, dept;
-        private string empStatus; //maybe change
         private uint salary;
 
         /***************************************************/
@@ -36,11 +35,7 @@ namespace Employee_Database_GUI
             set { dept = value; }
         }
 
-        public string EmpStatus
-        {
-            get { return empStatus; }
-            set { empStatus = value; }
-        }
+        public string EmpStatus { get; set; }
 
         public uint Salary
         {
@@ -55,7 +50,7 @@ namespace Employee_Database_GUI
             lname = "/0";//need to find out what this is for
             fname = "";
             dept = "";
-            empStatus = "";
+            EmpStatus = "";
             salary = 0;
         }
 
@@ -66,7 +61,7 @@ namespace Employee_Database_GUI
             lname = ConLname;
             fname = ConFname;
             dept = ConDept;
-            empStatus = ConStatus;
+            EmpStatus = ConStatus;
             salary = ConSal;
 
             //make sure the id is valid

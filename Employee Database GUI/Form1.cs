@@ -35,6 +35,7 @@ namespace Employee_Database_GUI
             //initialize list boxes
             UpdateEmployeeListBox();
             UpdateOptionsListBox();
+            UpdateDeptListBox();
         }
 
 
@@ -103,10 +104,58 @@ namespace Employee_Database_GUI
             EmployeeListBox.EndUpdate();
             }
 
-        
-		
+        /**********************************************************************
+        * Method: UpdateDeptListBox()
+        * 
+        * Use: Updates the department list box with department data
+        * 
+        * Parameters: none
+        ************************************************************************/
+
+        private void UpdateDeptListBox()
+        {
+
+            //set up for new info
+            DeptListBox.Items.Clear();
+
+            //prevent interfence with update
+            DeptListBox.BeginUpdate();
+
+            //set department listbox to depts array
+            DeptListBox.DataSource = Program.DeptsArr;
+
+            /*this is for if i need dept to be looked around like with employees */
+            #region
+            /*//add each employee into the list box
+            if (eidSearch == null)
+            {
+
+                foreach (Employee e in Program.EmployeeList)
+                {
+                    EmployeeListBox.Items.Add(string.Format("{0} -- {1}, {2}", e.Eid, e.Lname, e.Fname));
+                }
+            }
+            else
+            {
+                //lambda expression to check to see if any eid matches or starts with a requested eid
+                foreach (Employee e in Program.EmployeeList.Where(e => e.Eid.ToString().StartsWith(eidSearch.ToString()) || e.Eid == eidSearch))
+                {
+                    EmployeeListBox.Items.Add(string.Format("{0} -- {1}, {2}", e.Eid, e.Lname, e.Fname));
+                }
+               
+            }*/
+            #endregion
+
+            DeptListBox.EndUpdate();
+        }
+
 
         private void employeeOptions_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmployeeListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

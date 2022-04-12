@@ -34,7 +34,7 @@
             this.EmployeeListBox = new System.Windows.Forms.ListBox();
             this.OptionsLbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.DeptListbox = new System.Windows.Forms.ListBox();
+            this.DeptListBox = new System.Windows.Forms.ListBox();
             this.ResultListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -72,6 +72,7 @@
             this.EmployeeListBox.Name = "EmployeeListBox";
             this.EmployeeListBox.Size = new System.Drawing.Size(215, 82);
             this.EmployeeListBox.TabIndex = 0;
+            this.EmployeeListBox.SelectedIndexChanged += new System.EventHandler(this.EmployeeListBox_SelectedIndexChanged);
             // 
             // OptionsLbl
             // 
@@ -91,13 +92,13 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Department List";
             // 
-            // DeptListbox
+            // DeptListBox
             // 
-            this.DeptListbox.FormattingEnabled = true;
-            this.DeptListbox.Location = new System.Drawing.Point(512, 85);
-            this.DeptListbox.Name = "DeptListbox";
-            this.DeptListbox.Size = new System.Drawing.Size(215, 82);
-            this.DeptListbox.TabIndex = 0;
+            this.DeptListBox.FormattingEnabled = true;
+            this.DeptListBox.Location = new System.Drawing.Point(512, 85);
+            this.DeptListBox.Name = "DeptListBox";
+            this.DeptListBox.Size = new System.Drawing.Size(215, 82);
+            this.DeptListBox.TabIndex = 0;
             // 
             // ResultListBox
             // 
@@ -128,7 +129,7 @@
             this.Controls.Add(this.EmployeeLbl);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.EmployeeListBox);
-            this.Controls.Add(this.DeptListbox);
+            this.Controls.Add(this.DeptListBox);
             this.Controls.Add(this.OptionsListBox);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -146,7 +147,7 @@
         private System.Windows.Forms.ListBox EmployeeListBox;
         private System.Windows.Forms.Label OptionsLbl;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox DeptListbox;
+        private System.Windows.Forms.ListBox DeptListBox;
         private System.Windows.Forms.ListBox ResultListBox;
         private System.Windows.Forms.Label label1;
     }
