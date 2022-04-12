@@ -7,13 +7,9 @@ using System.Windows.Forms;
 namespace Employee_Database_GUI
 {
     static class Program
-    {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-       
+    {   
         //list of employees
-		public static List<Employee> EmployeeList = new List<Employee>();
+	public static List<Employee> EmployeeList = new List<Employee>();
      
         //array to hold the options users have for interacting with info
         public static string[] OptionsArr;
