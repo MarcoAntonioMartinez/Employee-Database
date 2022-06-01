@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.OptionsListBox = new System.Windows.Forms.ListBox();
-            this.submit = new System.Windows.Forms.Button();
+            this.submitBtn = new System.Windows.Forms.Button();
             this.EmployeeLbl = new System.Windows.Forms.Label();
             this.EmployeeListBox = new System.Windows.Forms.ListBox();
             this.OptionsLbl = new System.Windows.Forms.Label();
@@ -37,6 +37,9 @@
             this.DeptListBox = new System.Windows.Forms.ListBox();
             this.ResultListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.addEmpBtn = new System.Windows.Forms.Button();
+            this.editEmpBtn = new System.Windows.Forms.Button();
+            this.removeEmpBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // OptionsListBox
@@ -46,15 +49,17 @@
             this.OptionsListBox.Name = "OptionsListBox";
             this.OptionsListBox.Size = new System.Drawing.Size(215, 82);
             this.OptionsListBox.TabIndex = 0;
+            this.OptionsListBox.SelectedIndexChanged += new System.EventHandler(this.OptionsListBox_SelectedIndexChanged);
             // 
-            // submit
+            // submitBtn
             // 
-            this.submit.Location = new System.Drawing.Point(310, 198);
-            this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(127, 23);
-            this.submit.TabIndex = 1;
-            this.submit.Text = "Submit";
-            this.submit.UseVisualStyleBackColor = true;
+            this.submitBtn.Location = new System.Drawing.Point(512, 199);
+            this.submitBtn.Name = "submitBtn";
+            this.submitBtn.Size = new System.Drawing.Size(127, 23);
+            this.submitBtn.TabIndex = 1;
+            this.submitBtn.Text = "Submit";
+            this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // EmployeeLbl
             // 
@@ -77,11 +82,11 @@
             // OptionsLbl
             // 
             this.OptionsLbl.AutoSize = true;
-            this.OptionsLbl.Location = new System.Drawing.Point(19, 69);
+            this.OptionsLbl.Location = new System.Drawing.Point(19, 56);
             this.OptionsLbl.Name = "OptionsLbl";
-            this.OptionsLbl.Size = new System.Drawing.Size(159, 13);
+            this.OptionsLbl.Size = new System.Drawing.Size(162, 26);
             this.OptionsLbl.TabIndex = 2;
-            this.OptionsLbl.Text = "What would you like to look up?";
+            this.OptionsLbl.Text = "What would you like to look up? \r\nChoose more than one.";
             // 
             // label3
             // 
@@ -117,6 +122,33 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Output";
             // 
+            // addEmpBtn
+            // 
+            this.addEmpBtn.Location = new System.Drawing.Point(22, 199);
+            this.addEmpBtn.Name = "addEmpBtn";
+            this.addEmpBtn.Size = new System.Drawing.Size(127, 23);
+            this.addEmpBtn.TabIndex = 1;
+            this.addEmpBtn.Text = "Add an Employee";
+            this.addEmpBtn.UseVisualStyleBackColor = true;
+            // 
+            // editEmpBtn
+            // 
+            this.editEmpBtn.Location = new System.Drawing.Point(188, 199);
+            this.editEmpBtn.Name = "editEmpBtn";
+            this.editEmpBtn.Size = new System.Drawing.Size(127, 23);
+            this.editEmpBtn.TabIndex = 1;
+            this.editEmpBtn.Text = "Edit an Employee";
+            this.editEmpBtn.UseVisualStyleBackColor = true;
+            // 
+            // removeEmpBtn
+            // 
+            this.removeEmpBtn.Location = new System.Drawing.Point(363, 199);
+            this.removeEmpBtn.Name = "removeEmpBtn";
+            this.removeEmpBtn.Size = new System.Drawing.Size(127, 23);
+            this.removeEmpBtn.TabIndex = 1;
+            this.removeEmpBtn.Text = "Remove an Employee";
+            this.removeEmpBtn.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,12 +159,15 @@
             this.Controls.Add(this.OptionsLbl);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.EmployeeLbl);
-            this.Controls.Add(this.submit);
+            this.Controls.Add(this.removeEmpBtn);
+            this.Controls.Add(this.editEmpBtn);
+            this.Controls.Add(this.addEmpBtn);
+            this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.EmployeeListBox);
             this.Controls.Add(this.DeptListBox);
             this.Controls.Add(this.OptionsListBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Employee Database";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -142,7 +177,7 @@
         #endregion
 
         private System.Windows.Forms.ListBox OptionsListBox;
-        private System.Windows.Forms.Button submit;
+        private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.Label EmployeeLbl;
         private System.Windows.Forms.ListBox EmployeeListBox;
         private System.Windows.Forms.Label OptionsLbl;
@@ -150,6 +185,9 @@
         private System.Windows.Forms.ListBox DeptListBox;
         private System.Windows.Forms.ListBox ResultListBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button addEmpBtn;
+        private System.Windows.Forms.Button editEmpBtn;
+        private System.Windows.Forms.Button removeEmpBtn;
     }
 }
 

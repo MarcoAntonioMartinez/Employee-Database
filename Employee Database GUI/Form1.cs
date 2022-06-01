@@ -36,6 +36,8 @@ namespace Employee_Database_GUI
             UpdateEmployeeListBox();
             UpdateOptionsListBox();
             UpdateDeptListBox();
+
+            DeptListBox.Enabled = false;
         }
 
 
@@ -149,6 +151,35 @@ namespace Employee_Database_GUI
             DeptListBox.EndUpdate();
         }
 
+        /**********************************************************************
+        * Method: UpdateOptionsListBox()
+        * 
+        * Use: Updates the options list box with options for working with employee data
+        * 
+        * Parameters: none
+        ************************************************************************/
+
+        private void DisableListBox()
+        {
+            //   bool isEnabled = true;
+
+            //by default employee list should be disabled unless edit button is pressed
+            EmployeeListBox.Enabled = false;
+
+           
+            
+
+            //should just be variable
+            DeptListBox.Enabled = false;
+            //  if (//Selected index for listbox is an option that does not include department then department list is not visible)
+            //options list should have Create Read Update Delete I dont know maybe i should make the Crud its own set of options. Or maybe break the read down to the info
+            //like Read Salary, Read Employment Status. something like that
+            //index of department option
+            
+
+          //  return isEnabled;
+            }   //dept listbox should be invisible by default
+	
 
         private void employeeOptions_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -158,6 +189,74 @@ namespace Employee_Database_GUI
         private void EmployeeListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void OptionsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int[] empIndexArr = new int[] { 2, 3, 4 };
+
+            if (empIndexArr.Contains(OptionsListBox.SelectedIndex) && OptionsListBox.SelectedIndex == 2)
+                {
+               
+                    DeptListBox.Enabled = true;
+                    
+                }
+
+                else if(empIndexArr.Contains(OptionsListBox.SelectedIndex))
+                {
+                    DeptListBox.Enabled = false;
+                }
+
+                else
+                {
+                EmployeeListBox.Enabled = false;
+                    DeptListBox.Enabled = false;
+                }
+            
+            
+        }
+
+        private void submitBtn_Click(object sender, EventArgs e)
+        {
+            List<Employee> ResultList = new List<Employee>();
+            //name option selected
+            if (OptionsListBox.SelectedIndex == 1)
+            {
+                //department is marketing               
+                if (DeptListBox.SelectedIndex == 0)
+                {
+                    
+                    ResultList = Program.EmployeeList.Where(empl => Equals(empl.Dept, Program.DeptsArr[0])).ToList();
+
+                    //trying to make a header
+                    ResultListBox.Items.Add("Names of Employees in specified Department");
+
+                    for (int i = 0; i<ResultList.Count; i++)
+                    { 
+                        ResultListBox.Items.Add(ResultList[i].Lname + ", " + ResultList[i].Fname + " " + ResultList[i].Dept);
+                    }
+                }
+
+                //case statement see if it would be better
+
+                switch (DeptListBox.SelectedIndex)
+                {
+                    case 1:
+                        ResultList = Program.EmployeeList.Where(empl => Equals(empl.Dept, Program.DeptsArr[1])).ToList();
+                        break;
+                    case 2:
+                        ResultList = Program.EmployeeList.Where(empl => Equals(empl.Dept, Program.DeptsArr[2])).ToList();
+                        break;
+                    case 3:
+                        ResultList = Program.EmployeeList.Where(empl => Equals(empl.Dept, Program.DeptsArr[3])).ToList();
+                        break;
+                    case 4:
+                        ResultList = Program.EmployeeList.Where(empl => Equals(empl.Dept, Program.DeptsArr[4])).ToList();
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
     }
 }
